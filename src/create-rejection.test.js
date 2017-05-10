@@ -16,6 +16,8 @@ test('creates rejection with string payload', () => {
   expect(r).toBeInstanceOf(Error);
   expect(r.type).toBe('type');
   expect(r.payload).toBe('payload');
+  expect(r.toString()).toBe('type');
+  expect(r.toJSON()).toMatchObject({ type: 'type', payload: 'payload' });
   expect(JSON.stringify(r)).toBe('{"type":"type","payload":"payload"}');
 });
 

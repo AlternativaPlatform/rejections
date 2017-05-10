@@ -7,23 +7,3 @@ export default type => {
   creator.toString = () => type.toString();
   return creator;
 };
-
-//const handleRejection = rejectionsMap => rejection => {
-//  if (rejection && rejection.type) {
-//  }
-//
-//  if (rejectionsMap.else) return rejectionsMap.else(rejection);
-//};
-//
-//const unknown = createRejection('unknown');
-//const networkProblem = createRejection('network-problem');
-//
-//doAsyncStuff().catch(handleRejection(
-//  {
-//    [unknown]: r => r,
-//    [networkProblem]: r => r,
-//  },
-//  r => r
-//);
-
-
