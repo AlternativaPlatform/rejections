@@ -9,6 +9,14 @@
     "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
     "clean": "rimraf lib"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlternativaPlatform/rejections.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlternativaPlatform/rejections/issues"
+  },
+  "homepage": "https://github.com/AlternativaPlatform/rejections",
   "keywords": [
     "promise",
     "rejection",
