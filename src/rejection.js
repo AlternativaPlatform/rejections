@@ -4,14 +4,14 @@ export default class Rejection extends Error {
     this.type = type;
     this.payload = payload;
 
-    this.toString = () => this.type;
-
-    this.toJSON = () => {
+    Object.defineProperty(this, 'toString', { value: () => this.type });
+    
+    Object.defineProperty(this, 'toJSON', { value: () => {
       const json = { type: this.type };
       if (this.payload !== undefined) {
         json.payload = this.payload;
       }
       return json;
-    }
+    }});
   }
 }
